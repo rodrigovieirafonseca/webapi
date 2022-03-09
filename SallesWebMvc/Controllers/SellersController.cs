@@ -5,16 +5,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using SallesWebMvc.Services;
 using SallesWebMvc.Models;
+using SallesWebMvc.Models.ViewModels;
 
 namespace SallesWebMvc.Controllers
 {
     public class SellersController : Controller
     {
         private readonly SellerService _sellerService;
+        private readonly DepartmentService _departmentServicce;
 
-        public SellersController(SellerService sellerService)
+
+        public SellersController(SellerService sellerService, DepartmentService departmentService)
         {
             _sellerService = sellerService;
+            _departmentServicce = departmentService;
         }
 
         public IActionResult Index()
@@ -25,7 +29,9 @@ namespace SallesWebMvc.Controllers
 
         public IActionResult Create()
         {
-            return View();
+            var departments = _departmentServicce.FindAll();
+            var viewModel = new SellerFormViewModel { Departments = departments };
+            return View(viewModel);
         }
 
         [HttpPost]
