@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SallesWebMvc.Models;
+using SalesWebMvc.Models;
 
-namespace SallesWebMvc.Migrations
+namespace SalesWebMvc.Migrations
 {
-    [DbContext(typeof(SallesWebMvcContext))]
+    [DbContext(typeof(SalesWebMvcContext))]
     [Migration("20220309133956_Initial")]
     partial class Initial
     {
@@ -18,7 +18,7 @@ namespace SallesWebMvc.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("SallesWebMvc.Models.Department", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.Department", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SallesWebMvc.Services;
-using SallesWebMvc.Models;
-using SallesWebMvc.Models.ViewModels;
-using SallesWebMvc.Services.Exceptions;
+using SalesWebMvc.Services;
+using SalesWebMvc.Models;
+using SalesWebMvc.Models.ViewModels;
+using SalesWebMvc.Services.Exceptions;
 using System.Diagnostics;
 
-namespace SallesWebMvc.Controllers
+namespace SalesWebMvc.Controllers
 {
     public class SellersController : Controller
     {

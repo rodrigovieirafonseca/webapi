@@ -1,17 +1,17 @@
-﻿using SallesWebMvc.Models;
+﻿using SalesWebMvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace SallesWebMvc.Services
+namespace SalesWebMvc.Services
 {
     public class DepartmentService
     {
-        private readonly SallesWebMvcContext _context;
+        private readonly SalesWebMvcContext _context;
 
-        public DepartmentService(SallesWebMvcContext context)
+        public DepartmentService(SalesWebMvcContext context)
         {
             _context = context;
         }

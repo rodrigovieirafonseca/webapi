@@ -4,17 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace SallesWebMvc.Models
+namespace SalesWebMvc.Models
 {
-    public class SallesWebMvcContext : DbContext
+    public class SalesWebMvcContext : DbContext
     {
-        public SallesWebMvcContext (DbContextOptions<SallesWebMvcContext> options)
+        public SalesWebMvcContext (DbContextOptions<SalesWebMvcContext> options)
             : base(options)
         {
         }
 
         public DbSet<Department> Department { get; set; }
         public DbSet<Seller> Seller { get; set; }
-        public DbSet<SallesRecord> SalesRecord { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
     }
 }

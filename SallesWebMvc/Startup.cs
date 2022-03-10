@@ -10,13 +10,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SallesWebMvc.Models;
-using SallesWebMvc.Data;
-using SallesWebMvc.Services;
+using SalesWebMvc.Models;
+using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 
-namespace SallesWebMvc
+namespace SalesWebMvc
 {
     public class Startup
     {
@@ -40,13 +40,14 @@ namespace SallesWebMvc
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<SallesWebMvcContext>(options =>
-            options.UseMySql(Configuration.GetConnectionString("SallesWebMvcContext"), builder =>
-            builder.MigrationsAssembly("SallesWebMvc")));
+            services.AddDbContext<SalesWebMvcContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("SalesWebMvcContext"), builder =>
+            builder.MigrationsAssembly("SalesWebMvc")));
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
             services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace SallesWebMvc.Migrations
+namespace SalesWebMvc.Migrations
 {
     public partial class DepartmentForeignKey : Migration
     {

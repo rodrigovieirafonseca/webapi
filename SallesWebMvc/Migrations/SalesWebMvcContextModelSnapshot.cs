@@ -3,12 +3,12 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SallesWebMvc.Models;
+using SalesWebMvc.Models;
 
-namespace SallesWebMvc.Migrations
+namespace SalesWebMvc.Migrations
 {
-    [DbContext(typeof(SallesWebMvcContext))]
-    partial class SallesWebMvcContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(SalesWebMvcContext))]
+    partial class SalesWebMvcContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -17,7 +17,7 @@ namespace SallesWebMvc.Migrations
                 .HasAnnotation("ProductVersion", "2.1.14-servicing-32113")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("SallesWebMvc.Models.Department", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.Department", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -29,7 +29,7 @@ namespace SallesWebMvc.Migrations
                     b.ToTable("Department");
                 });
 
-            modelBuilder.Entity("SallesWebMvc.Models.SallesRecord", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -49,7 +49,7 @@ namespace SallesWebMvc.Migrations
                     b.ToTable("SalesRecord");
                 });
 
-            modelBuilder.Entity("SallesWebMvc.Models.Seller", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -74,16 +74,16 @@ namespace SallesWebMvc.Migrations
                     b.ToTable("Seller");
                 });
 
-            modelBuilder.Entity("SallesWebMvc.Models.SallesRecord", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.SalesRecord", b =>
                 {
-                    b.HasOne("SallesWebMvc.Models.Seller", "Seller")
+                    b.HasOne("SalesWebMvc.Models.Seller", "Seller")
                         .WithMany("Sales")
                         .HasForeignKey("SellerId");
                 });
 
-            modelBuilder.Entity("SallesWebMvc.Models.Seller", b =>
+            modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
                 {
-                    b.HasOne("SallesWebMvc.Models.Department", "Department")
+                    b.HasOne("SalesWebMvc.Models.Department", "Department")
                         .WithMany("Sellers")
                         .HasForeignKey("DepartmentId")
                         .OnDelete(DeleteBehavior.Cascade);

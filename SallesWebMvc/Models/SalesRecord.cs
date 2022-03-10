@@ -1,12 +1,12 @@
-﻿using SallesWebMvc.Models.Enums;
+﻿using SalesWebMvc.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SallesWebMvc.Models
+namespace SalesWebMvc.Models
 {
-    public class SallesRecord
+    public class SalesRecord
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
@@ -14,12 +14,12 @@ namespace SallesWebMvc.Models
         public SaleStatus Status { get; set; }
         public Seller Seller { get; set; }
 
-        public SallesRecord()
+        public SalesRecord()
         {
 
         }
 
-        public SallesRecord(int id, DateTime date, double ammount, SaleStatus status, Seller seller)
+        public SalesRecord(int id, DateTime date, double ammount, SaleStatus status, Seller seller)
         {
             Id = id;
             Date = date;

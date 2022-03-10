@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SallesWebMvc.Models.ViewModels;
+using SalesWebMvc.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SallesWebMvc.Controllers
+namespace SalesWebMvc.Controllers
 {
     public class HomeController : Controller
     {
@@ -17,7 +17,7 @@ namespace SallesWebMvc.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Salles Web App";
+            ViewData["Message"] = "Sales Web App";
             ViewData["Creator"] = "Rodrigovf";
             return View();
         }

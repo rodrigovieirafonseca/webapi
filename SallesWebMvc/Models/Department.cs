@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace SallesWebMvc.Models
+namespace SalesWebMvc.Models
 {
     public class Department
     {

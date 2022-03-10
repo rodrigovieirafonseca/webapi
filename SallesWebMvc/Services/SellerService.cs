@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using SallesWebMvc.Models;
+using SalesWebMvc.Models;
 using Microsoft.EntityFrameworkCore;
-using SallesWebMvc.Services.Exceptions;
+using SalesWebMvc.Services.Exceptions;
 
-namespace SallesWebMvc.Services
+namespace SalesWebMvc.Services
 {
     public class SellerService
     {
-        private readonly SallesWebMvcContext _context;
+        private readonly SalesWebMvcContext _context;
 
-        public SellerService(SallesWebMvcContext context)
+        public SellerService(SalesWebMvcContext context)
         {
             _context = context;
         }

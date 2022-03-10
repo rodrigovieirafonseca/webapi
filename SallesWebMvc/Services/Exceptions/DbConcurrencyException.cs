@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SallesWebMvc.Services.Exceptions
+namespace SalesWebMvc.Services.Exceptions
 {
     public class DbConcurrencyException : ApplicationException
     {
